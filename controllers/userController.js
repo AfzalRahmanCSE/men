@@ -43,7 +43,7 @@ const getAllUsersByQuery=async (req,res)=>{
     const data=await User.count({
         where: {
             name: {
-              [Op.like]: '%a%'
+              [Op.lt]: 3
             }
           }
     })
